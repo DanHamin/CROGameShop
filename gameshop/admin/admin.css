@@ -1,0 +1,70 @@
+/*  ADMIN PANEL  */
+
+body{
+    background: #121821;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px;
+}
+
+/* Title */
+
+.admin-title{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+/* Grid */
+
+.admin-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Cards */
+
+.admin-card{
+
+    background: #1f2a35;
+
+    padding: 30px 25px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    color: white;
+
+    text-align: center;
+
+    transition: all 0.25s ease;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.admin-card i{
+    font-size: 40px;
+    color: #ff7a18;
+    margin-bottom: 15px;
+}
+
+.admin-card h3{
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.admin-card p{
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.admin-card:hover{
+    transform: translateY(-6px);
+    background: #263445;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}

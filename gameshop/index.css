@@ -1,0 +1,257 @@
+/* 
+   CAROUSEL – INDEX PAGE STYLES */
+
+/*  CONTAINER */
+.carousel-container {
+    position: relative;
+    max-width: 1440px;
+    margin: 30px auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;          
+}
+
+.carousel-wrapper::-webkit-scrollbar {
+    display: none;                  
+}
+
+/*  SLIDE  */
+.carousel-slide {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding: 0 4px 10px 4px;       
+    scroll-behavior: smooth;
+}
+
+/* GAME CARD */
+.game-card {
+    flex: 0 0 260px;
+    width: 260px;
+    background: #1f2a35;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: all 0.22s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+}
+
+/* Link unutar kartice */
+.game-card a {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Slika */
+.game-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Naslov */
+.game-card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 12px 10px 6px;
+    line-height: 1.35;
+    min-height: 42px;
+
+    
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;     
+    line-clamp: 2;                   
+}
+
+/* Cijena */
+.game-card .price {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    color: #fbbf24;
+}
+
+.game-card del {
+    color: #94a3b8;
+    font-size: 13px;
+    margin-right: 8px;
+    font-weight: 400;
+}
+
+/* CAROUSEL BUTTONS (strelice lijevo/desno) */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 54px;
+    height: 54px;
+    background: rgba(30, 41, 59, 0.75);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: all 0.25s ease;
+    backdrop-filter: blur(4px);
+}
+
+.carousel-btn:hover {
+    background: #ff7a18;
+    opacity: 1;
+    transform: translateY(-50%) scale(1.08);
+}
+
+.carousel-btn.prev {
+    left: 12px;
+}
+
+.carousel-btn.next {
+    right: 12px;
+}
+
+.carousel-container .carousel-btn {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-container:hover .carousel-btn {
+    opacity: 0.85;
+}
+
+/* RESPONSIVE   */
+
+/* Veliki ekrani */
+@media (min-width: 1400px) {
+    .game-card {
+        flex: 0 0 280px;
+        width: 280px;
+    }
+    .game-card img {
+        height: 260px;
+    }
+}
+
+/* Srednji ekrani */
+@media (max-width: 1200px) {
+    .game-card {
+        flex: 0 0 240px;
+        width: 240px;
+    }
+    .game-card img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 992px) {
+    .game-card {
+        flex: 0 0 220px;
+        width: 220px;
+    }
+    .game-card img {
+        height: 200px;
+    }
+}
+
+/* Tableti i mali laptopi */
+@media (max-width: 768px) {
+    .carousel-container {
+        padding: 0 10px;
+    }
+    .game-card {
+        flex: 0 0 180px;
+        width: 180px;
+    }
+    .game-card img {
+        height: 160px;
+    }
+    .game-card h3 {
+        font-size: 14px;
+        margin: 10px 8px 6px;
+    }
+    .carousel-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 22px;
+    }
+    .carousel-btn.prev { left: 8px; }
+    .carousel-btn.next { right: 8px; }
+}
+
+/* Mobiteli */
+@media (max-width: 480px) {
+    .game-card {
+        flex: 0 0 160px;
+        width: 160px;
+    }
+    .game-card img {
+        height: 140px;
+    }
+}
+
+/* Naslovi kategorija */
+.category-title {
+    text-align: left;
+    margin: 60px 0 30px 200px;       
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: #e2e8f0;
+}
+
+.category-title a {
+    color: #ff6600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.category-title a:hover {
+    color: #ff9a3d;
+}
+
+/* Na malim ekranima – naslovi se prilagođavaju */
+@media (max-width: 768px) {
+    .category-title {
+        text-align: center;             
+        margin: 40px 0 20px 0;          
+        font-size: 1.8rem;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-title {
+        font-size: 1.6rem;
+        margin: 30px 0 15px 0;
+    }
+}
+
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1440px;
+    margin: 0 auto;
+}

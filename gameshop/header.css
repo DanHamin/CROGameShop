@@ -1,0 +1,239 @@
+/* BASE  */
+
+body {
+    margin: 0;
+    background: #121821;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+
+/*  NAVBAR*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 40px;
+
+    background: #0d1117;
+    border-bottom: 1px solid #222;
+}
+
+
+/* LEFT + RIGHT */
+
+.navbar-left,
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* LINKS */
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+
+    padding: 6px 10px;
+    border-radius: 5px;
+
+    transition: background 0.2s;
+}
+
+.navbar a:hover {
+    background: #1f2a35;
+}
+
+
+/*  DROPDOWN  */
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    cursor: pointer;
+    padding: 6px 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #2c3e50;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    border-radius: 6px;
+    z-index: 100;
+    padding: 8px 0;
+    margin-top: 2px;
+}
+
+/* Svaki link vertikalno */
+.dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background: #34495e;
+}
+
+/* Hover na cijelom dropdown-u (ključ za stabilnost) */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Nevidljiva zona iznad content-a – sprječava trenutno zatvaranje */
+.dropdown-content::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 0;
+    right: 0;
+    height: 15px;
+}
+
+/*  SEARCH  */
+
+.navbar-search {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-search input {
+    padding: 6px 10px;
+
+    border: none;
+    border-radius: 5px 0 0 5px;
+
+    outline: none;
+
+    background: #1f2a35;
+    color: #fff;
+
+    width: 160px;
+}
+
+.navbar-search input::placeholder {
+    color: #aaa;
+}
+
+.navbar-search button {
+    padding: 6px 12px;
+
+    border: none;
+
+    background: #ff7a18;
+    color: #fff;
+
+    border-radius: 0 5px 5px 0;
+
+    cursor: pointer;
+
+    transition: background 0.2s;
+}
+
+.navbar-search button:hover {
+    background: #ff9a3d;
+}
+
+
+/*  USER */
+
+.user {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+
+/* RESPONSIVE  */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .navbar-left,
+    .navbar-right {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar-search input {
+        width: 120px;
+    }
+}
+
+
+.cart-icon {
+    position: relative;
+    transition: color 0.2s;
+}
+
+.cart-icon:hover {
+    color: #ff6600;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #e74c3c;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    min-width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    pointer-events: none;
+}
+
+/*  NOTIFICATIONS  */
+
+.notif-icon{
+    position: relative;
+    color: white;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+.notif-icon:hover{
+    color: #ff7a18;
+}
+
+.notif-badge{
+    position: absolute;
+    top: -6px;
+    right: -8px;
+
+    background: #e74c3c;
+    color: white;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    min-width: 18px;
+    height: 18px;
+    line-height: 18px;
+
+    text-align: center;
+    border-radius: 50%;
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}

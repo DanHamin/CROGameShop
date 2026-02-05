@@ -1,0 +1,180 @@
+/* Glavni container grid-a */
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 340px));  
+    gap: 24px 20px;
+    padding: 0 16px 48px;
+    margin: 0 auto;                  
+    max-width: 1440px;               
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;          
+}
+
+.game-card {
+    min-width: 340px;                
+    width: 100%;
+    max-width: none;
+    background: #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+   .games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px 20px;
+    padding: 0 16px 48px;
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Pojedinačna kartica igre */
+.game-card {
+    background: #1e293b;                    
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;                           
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* Slika */
+.game-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Naslov */
+.game-card h3 {
+    font-size: 1.08rem;
+    font-weight: 600;
+    margin: 14px 14px 6px;
+    line-height: 1.35;
+    color: #e2e8f0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Cijena */
+.price-row {
+    margin: 0 14px 14px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #a5b4fc;
+}
+
+.price-row del {
+    color: #94a3b8;
+    font-size: 0.92rem;
+    margin-right: 8px;
+}
+
+.price-row strong {
+    color: #fbbf24;
+}
+
+/* Gumb Ukloni */
+.btn-remove {
+    margin: 0 auto 16px;
+    padding: 9px 20px;
+    background: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.96rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    width: 88%;
+}
+
+.btn-remove:hover {
+    background: #b91c1c;
+}
+
+/* Naslov stranice */
+h1 {
+    color: #e2e8f0;
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin: 32px 0 24px;
+    text-align: center;
+}
+
+/* Poruka praznog wishlista */
+p {
+    color: #94a3b8;
+    font-size: 1.25rem;
+    text-align: center;
+    margin: 60px 0;
+    line-height: 1.5;
+}
+
+/*  Responsive prilagodbe */
+
+@media (min-width: 1400px) {
+    .games-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 28px 24px;
+    }
+}
+
+@media (min-width: 1100px) and (max-width: 1399px) {
+    .games-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1099px) {
+    .games-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 12px;
+        padding: 0 12px 32px;
+    }
+
+    .game-card img {
+        height: 160px;
+    }
+
+    .game-card h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .games-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .btn-remove {
+        width: 92%;
+        padding: 10px;
+    }
+}
+

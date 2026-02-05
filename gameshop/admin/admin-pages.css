@@ -1,0 +1,129 @@
+/*  ADMIN PAGES  */
+
+.admin-box{
+
+    background: #1f2a35;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+/* Success */
+
+.success{
+    color: lime;
+    margin-bottom: 15px;
+}
+
+/*  FORMS  */
+
+.admin-form{
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.admin-form input, .admin-form select{
+
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #263445;
+    color: white;
+}
+
+.admin-form input:focus, .admin-form select:focus{
+    outline: 2px solid #ff7a18;
+}
+
+.admin-form button{
+
+    background: #ff7a18;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.admin-form button:hover{
+    background: #ff9a3d;
+}
+
+/*  TABLE  */
+
+.admin-table{
+
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.admin-table th,.admin-table td{
+
+    padding: 12px;
+    border-bottom: 1px solid #333;
+    text-align: center;
+}
+
+.admin-table th{
+    background: #263445;
+}
+
+.admin-table tr:hover{
+    background: #263445;
+}
+
+/* Inline form */
+
+.inline-form{
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.inline-form input{
+
+    width: 90px;
+    background: #121821;
+    border: none;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.inline-form button{
+
+    background: #2ecc71;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.inline-form button:hover{
+    background: #27ae60;
+}
+
+/* Delete */
+
+.btn-delete{
+
+    background: #e74c3c;
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.btn-delete:hover{
+    background: #c0392b;
+}

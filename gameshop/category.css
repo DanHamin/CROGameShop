@@ -1,0 +1,135 @@
+/*  Grid prikaz igara  */
+.games-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/*  Kartica igre  */
+.category-game-card {
+    width: 220px;
+    background-color: #34495e; 
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.category-game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Slika igre */
+.category-game-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Donji dio kartice: ime igre + cijena + košarica */
+.card-bottom {
+    display: flex;
+    flex-direction: column;
+    background-color: #2c3e50; 
+}
+
+.card-bottom h3 {
+    font-size: 16px;
+    margin: 0;
+    padding: 8px 10px;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.price-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    background-color: #22303b; 
+}
+
+.price-cart .price {
+    font-weight: bold;
+    color: #fff;
+    font-size: 14px;
+}
+
+.price-cart .price del {
+    color: #ccc;
+    margin-right: 5px;
+}
+
+.price-cart .add-cart {
+    background-color: #ff6600;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.price-cart .add-cart:hover {
+    background-color: #e65c00;
+}
+
+/*  Paginacija  */
+.pagination a, .pagination strong {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #2c3e50;
+    background-color: #f0f0f0;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.pagination a:hover {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+.pagination strong {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+/*  Responsive */
+@media (max-width: 1200px) {
+    .category-game-card {
+        width: 200px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .category-game-card {
+        width: 180px;
+    }
+}
+
+@media (max-width: 800px) {
+    .category-game-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 500px) {
+    .category-game-card {
+        width: 90%;
+    }
+}
